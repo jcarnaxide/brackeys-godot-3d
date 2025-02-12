@@ -20,8 +20,9 @@ Hold `Ctrl` while using these to enable snapping. Also pressing `T` will toggle 
 ## Prototype with Greyboxing
 It is so essential to start out with prototypes for our levels, to avoid wasting time bogged down in the details when our idea is not concrete yet.
 
-Godot makes this very quick and easy through the use of CSG nodes. Constructive Solid Geometry.
-
 **Brackey's suggests** Using snapping when prototyping, and he also updated his snap settings. Transform -> Configure Snap
-
 ![Snap Settings](readme_screenshots/snap_settings.png)
+
+Godot makes this very quick and easy through the use of CSG nodes (Constructive Solid Geometry). CSG nodes have little handles which can be used to quickly scale your nodes. If you hold `Alt` while dragging these handles, it will mirror on both sides. Collision can also be quickly enabled by checking the box `Use Collision`
+
+We can also do cool things like subtract one CSG node from another, by creating a CSG node that is a child of the other node, and changing the Operation. This can be an easy way to create doors, windows, etc...
