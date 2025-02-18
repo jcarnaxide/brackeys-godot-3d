@@ -20,6 +20,8 @@ Hold `Ctrl` while using these to enable snapping. Also pressing `T` will toggle 
 ## Prototype with Greyboxing
 It is so essential to start out with prototypes for our levels, to avoid wasting time bogged down in the details when our idea is not concrete yet.
 
+When ready to start replacing your Greyboxing with actual assets, you can set all the greyboxes as collision disabled, and set the color for them to something easy to see like a magenta, also set the transparency to alpha, and make them a bit transparent. This will make it easier to put your assets in place.
+
 **Brackey's suggests** Using snapping when prototyping, and he also updated his snap settings. Transform -> Configure Snap
 ![Snap Settings](readme_screenshots/snap_settings.png)
 
