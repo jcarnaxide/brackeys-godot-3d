@@ -1,6 +1,8 @@
-[gd_scene load_steps=5 format=3 uid="uid://tv72xgoog45a"]
+[gd_scene load_steps=7 format=3 uid="uid://tv72xgoog45a"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ek2xh"]
+[ext_resource type="PackedScene" uid="uid://dm1436hv0bw8j" path="res://scenes/wall.tscn" id="3_ik18u"]
+[ext_resource type="PackedScene" uid="uid://cic7l07a2vfyp" path="res://scenes/chest.tscn" id="3_t7n1t"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_obhh2"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -130,3 +132,12 @@ input_right = "move_right"
 input_forward = "move_up"
 input_back = "move_down"
 input_jump = "jump"
+
+[node name="Chest" parent="." instance=ExtResource("3_t7n1t")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.8737, 0.0999999, 4.88886)
+
+[node name="Wall" parent="." instance=ExtResource("3_ik18u")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.1, 0.1, 11.2)
+
+[node name="Wall2" parent="." instance=ExtResource("3_ik18u")]
+transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, -16.1, 0.1, 7.2)
