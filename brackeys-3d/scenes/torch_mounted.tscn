@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://ctn3rxka0grqd"]
+
+[ext_resource type="PackedScene" uid="uid://dd0t8ld2koiek" path="res://models/props/torch_mounted.glb" id="1_2k5nh"]
+
+[node name="TorchMounted" type="Node3D"]
+
+[node name="torch_mounted2" parent="." instance=ExtResource("1_2k5nh")]

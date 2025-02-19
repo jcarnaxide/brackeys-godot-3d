@@ -1,0 +1,7 @@
+[gd_scene load_steps=2 format=3 uid="uid://bmkttiu7x4elv"]
+
+[ext_resource type="PackedScene" uid="uid://bv20wnt20ufw" path="res://models/props/candles.glb" id="1_maubj"]
+
+[node name="Candles" type="Node3D"]
+
+[node name="candles" parent="." instance=ExtResource("1_maubj")]
