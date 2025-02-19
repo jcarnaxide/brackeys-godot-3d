@@ -1,4 +1,4 @@
-[gd_scene load_steps=25 format=3 uid="uid://tv72xgoog45a"]
+[gd_scene load_steps=29 format=3 uid="uid://tv72xgoog45a"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ek2xh"]
 [ext_resource type="PackedScene" uid="uid://ktogkjeouoqv" path="res://scenes/wall_corner.tscn" id="2_q1bhw"]
@@ -15,12 +15,16 @@
 [ext_resource type="PackedScene" uid="uid://c6kdyu02snesn" path="res://scenes/pillar.tscn" id="13_r2ujd"]
 [ext_resource type="PackedScene" uid="uid://ctn3rxka0grqd" path="res://scenes/torch_mounted.tscn" id="14_6trjc"]
 [ext_resource type="PackedScene" uid="uid://da4xwc2g8e1gf" path="res://scenes/keg_decorated.tscn" id="14_fs8q2"]
-[ext_resource type="PackedScene" uid="uid://bu65lbmmtbdvv" path="res://models/props/banner_mounted.glb" id="16_eboit"]
 [ext_resource type="PackedScene" uid="uid://d2s53do78tq5i" path="res://scenes/table_medium.tscn" id="17_8luu5"]
 [ext_resource type="PackedScene" uid="uid://cic7l07a2vfyp" path="res://scenes/chest.tscn" id="18_uelcx"]
 [ext_resource type="PackedScene" uid="uid://bkt2xnqs4m53d" path="res://scenes/table_small.tscn" id="19_c54dy"]
 [ext_resource type="PackedScene" uid="uid://bmkttiu7x4elv" path="res://scenes/candles.tscn" id="20_8801y"]
+[ext_resource type="PackedScene" uid="uid://c7kqydg1wlp36" path="res://models/props/sword_shield.glb" id="21_6b73q"]
 [ext_resource type="PackedScene" uid="uid://cytn81p61m1xe" path="res://scenes/chair.tscn" id="21_kostv"]
+[ext_resource type="PackedScene" uid="uid://d1tixmo3valp" path="res://models/props/coin_stack.glb" id="22_4than"]
+[ext_resource type="PackedScene" uid="uid://dumoxc4dnmbkl" path="res://models/props/plate_food.glb" id="23_2w10d"]
+[ext_resource type="PackedScene" uid="uid://d30urclh47y74" path="res://models/props/keyring.glb" id="24_ibe38"]
+[ext_resource type="PackedScene" uid="uid://cmt6p3y57rjie" path="res://scenes/crates_stacked.tscn" id="25_us78r"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_obhh2"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -333,12 +337,6 @@ transform = Transform3D(-4.37114e-08, 0, -1, 0, 1, 0, 1, 0, -4.37114e-08, 8.4, 1
 [node name="KegDecorated" parent="Decor" instance=ExtResource("14_fs8q2")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -12.3426, 0.0999999, -7.75879)
 
-[node name="banner_mounted" parent="Decor" instance=ExtResource("16_eboit")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 6.9, -1.49012e-07, 2.6)
-
-[node name="banner_mounted2" parent="Decor" instance=ExtResource("16_eboit")]
-transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 2.5, -1.49012e-07, 2.6)
-
 [node name="TableMedium" parent="Decor" instance=ExtResource("17_8luu5")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.7, 0.1, -2.2)
 
@@ -356,3 +354,30 @@ transform = Transform3D(5.96046e-08, 0, 1, 0, 1, 0, -1, 0, 5.96046e-08, 5.8, 0.1
 
 [node name="Chair2" parent="Decor" instance=ExtResource("21_kostv")]
 transform = Transform3D(0.866025, 0, 0.5, 0, 1, 0, -0.5, 0, 0.866025, 7.4, 0.1, -2.5)
+
+[node name="sword_shield" parent="Decor" instance=ExtResource("21_6b73q")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 1, 1.9, 2.8)
+
+[node name="coin_stack" parent="Decor" instance=ExtResource("22_4than")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, 5.6, 1.1, -2.2)
+
+[node name="TableMedium2" parent="Decor" instance=ExtResource("17_8luu5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.613, 0.0999999, 10.8373)
+
+[node name="TableMedium3" parent="Decor" instance=ExtResource("17_8luu5")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.83501, 0.1, 6.5453)
+
+[node name="Chair3" parent="Decor" instance=ExtResource("21_kostv")]
+transform = Transform3D(-0.642788, 0, -0.766044, 0, 1, 0, 0.766044, 0, -0.642788, -13.4, 0.1, 12.4)
+
+[node name="Chair4" parent="Decor" instance=ExtResource("21_kostv")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -4.1, 0.1, 6.3)
+
+[node name="plate_food" parent="Decor" instance=ExtResource("23_2w10d")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -5.8, 1.1, 6.6)
+
+[node name="keyring2" parent="Decor" instance=ExtResource("24_ibe38")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 1.1, 11.1)
+
+[node name="CratesStacked" parent="Decor" instance=ExtResource("25_us78r")]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0.1, -5.5)
