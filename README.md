@@ -39,6 +39,8 @@ There are a few different way 3D animated rigs can be bundled in glb files.
 Protip, looping of imported animations can be set on the advanced import screen.
 
 ## Environment and Lighting
+
+### Environment
 We are reviewing the different types of environments we can set. There are a few proceduraly generated options.
 
 We can also set the background to an HDRI, a good website to find freely licenses HDRI's is [Poly Haven](https://polyhaven.com/hdris).
@@ -46,3 +48,25 @@ We can also set the background to an HDRI, a good website to find freely license
 No matter which background we choose, we can adjust the instensity with the energy multiplier.
 
 Be careful about importing HDR files, as the initial import process can be a bit graphics intensive. Make sure you have a decent size VRAM on your graphics card before doing this. Otherwise you might find godot freezing up on you during import.
+
+Some things to try:
+ - Enable SSAO, (or Screen Space Ambient Occlusion) will shadow areas where light might have a hard time reaching.
+ - Tonemap can be configured for the overall style of the game. Try using ACES, with exposure of 1.2, and white of 6. The exposure helps to brighten up the scene.
+ - Select Adjustments -> Color Correction, Gradient Texture 1D, Add two more points near the white and black point, we can use them to bring in warmth in the highlights, make the shadows cooler, and adjust the contrast moving them back and forth.
+
+### Lighting
+We added some omni directional lights to the scene. Some cool features for lights is to do things like:
+ - Enable Shadows, although be cautious not to do this too much.
+ - Play with the range of the lights if we want it to light more or less of the area.
+
+### Camera Settings
+Things to try:
+ - Change `Projection` to Orthogonal, adjust the size to fit. This will be useful for an isometric game.
+ - In perspective mode we can adjust the FOV (Field of View)
+ - We can adjust camera attributes, either directly for one camera, or in the world environment for all cameras.
+
+## Rendering Settings
+Check out these project settings areas with Advanced Settigns enabled:
+ - Rendering -> AntiAliasing, Brackey's enabled 4x Slow
+ - Rendering -> Light and Shadows
+ - Rendering -> Environment

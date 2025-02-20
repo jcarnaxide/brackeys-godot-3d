@@ -1,4 +1,4 @@
-[gd_scene load_steps=31 format=3 uid="uid://tv72xgoog45a"]
+[gd_scene load_steps=33 format=3 uid="uid://tv72xgoog45a"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ek2xh"]
 [ext_resource type="PackedScene" uid="uid://ktogkjeouoqv" path="res://scenes/wall_corner.tscn" id="2_q1bhw"]
@@ -28,6 +28,13 @@
 [ext_resource type="PackedScene" uid="uid://cby2i7o561nov" path="res://scenes/skeleton_mage.tscn" id="26_fb1c5"]
 [ext_resource type="PackedScene" uid="uid://b6a7gox4g5xrn" path="res://scenes/zombie.tscn" id="27_dsgwa"]
 
+[sub_resource type="Gradient" id="Gradient_ue7rj"]
+offsets = PackedFloat32Array(0, 0.124498, 0.875502, 1)
+colors = PackedColorArray(0, 0, 0, 1, 0.104898, 0.122697, 0.175833, 1, 0.882671, 0.876635, 0.847377, 1, 1, 1, 1, 1)
+
+[sub_resource type="GradientTexture1D" id="GradientTexture1D_eucu8"]
+gradient = SubResource("Gradient_ue7rj")
+
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_obhh2"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
 ground_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -38,8 +45,14 @@ sky_material = SubResource("ProceduralSkyMaterial_obhh2")
 [sub_resource type="Environment" id="Environment_na4yn"]
 background_mode = 2
 sky = SubResource("Sky_jo1un")
-tonemap_mode = 2
+ambient_light_sky_contribution = 0.5
+tonemap_mode = 3
+tonemap_exposure = 1.2
+tonemap_white = 6.0
+ssao_enabled = true
 glow_enabled = true
+adjustment_enabled = true
+adjustment_color_correction = SubResource("GradientTexture1D_eucu8")
 
 [node name="Main" type="Node3D"]
 
@@ -48,6 +61,7 @@ environment = SubResource("Environment_na4yn")
 
 [node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
 transform = Transform3D(-0.866025, -0.433013, 0.25, 0.469846, -0.533759, 0.703097, -0.17101, 0.726361, 0.665699, 0, 28.6, 0)
+light_color = Color(1, 1, 0.92549, 1)
 shadow_enabled = true
 
 [node name="ProtoController" parent="." instance=ExtResource("1_ek2xh")]
