@@ -1,4 +1,4 @@
-[gd_scene load_steps=29 format=3 uid="uid://tv72xgoog45a"]
+[gd_scene load_steps=31 format=3 uid="uid://tv72xgoog45a"]
 
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ek2xh"]
 [ext_resource type="PackedScene" uid="uid://ktogkjeouoqv" path="res://scenes/wall_corner.tscn" id="2_q1bhw"]
@@ -25,6 +25,8 @@
 [ext_resource type="PackedScene" uid="uid://dumoxc4dnmbkl" path="res://models/props/plate_food.glb" id="23_2w10d"]
 [ext_resource type="PackedScene" uid="uid://d30urclh47y74" path="res://models/props/keyring.glb" id="24_ibe38"]
 [ext_resource type="PackedScene" uid="uid://cmt6p3y57rjie" path="res://scenes/crates_stacked.tscn" id="25_us78r"]
+[ext_resource type="PackedScene" uid="uid://cby2i7o561nov" path="res://scenes/skeleton_mage.tscn" id="26_fb1c5"]
+[ext_resource type="PackedScene" uid="uid://b6a7gox4g5xrn" path="res://scenes/zombie.tscn" id="27_dsgwa"]
 
 [sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_obhh2"]
 sky_horizon_color = Color(0.64625, 0.65575, 0.67075, 1)
@@ -381,3 +383,9 @@ transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -10.5, 1.1, 11.1)
 
 [node name="CratesStacked" parent="Decor" instance=ExtResource("25_us78r")]
 transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -3.4, 0.1, -5.5)
+
+[node name="SkeletonMage" parent="." instance=ExtResource("26_fb1c5")]
+transform = Transform3D(0.173648, 0, -0.984808, 0, 1, 0, 0.984808, 0, 0.173648, 6.8, 0.1, 0.3)
+
+[node name="Zombie" parent="." instance=ExtResource("27_dsgwa")]
+transform = Transform3D(-0.642788, 0, 0.766044, 0, 1, 0, -0.766044, 0, -0.642788, -13.3, 0.1, 0.4)
