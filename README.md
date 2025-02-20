@@ -37,3 +37,12 @@ There are a few different way 3D animated rigs can be bundled in glb files.
 **Brackey's suggests** Using the separate files method, that way you don't need to include all the extra animations that you might not be using.
 
 Protip, looping of imported animations can be set on the advanced import screen.
+
+## Environment and Lighting
+We are reviewing the different types of environments we can set. There are a few proceduraly generated options.
+
+We can also set the background to an HDRI, a good website to find freely licenses HDRI's is [Poly Haven](https://polyhaven.com/hdris).
+
+No matter which background we choose, we can adjust the instensity with the energy multiplier.
+
+Be careful about importing HDR files, as the initial import process can be a bit graphics intensive. Make sure you have a decent size VRAM on your graphics card before doing this. Otherwise you might find godot freezing up on you during import.
