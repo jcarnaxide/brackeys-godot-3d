@@ -18,6 +18,7 @@ jobs:
   export-web:
     name: Web Export
     runs-on: ubuntu-latest
+    timeout-minutes: 10
     container:
       image: barichello/godot-ci:4.3
     steps:
