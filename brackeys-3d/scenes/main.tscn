@@ -1,6 +1,5 @@
-[gd_scene load_steps=34 format=3 uid="uid://tv72xgoog45a"]
+[gd_scene load_steps=33 format=3 uid="uid://tv72xgoog45a"]
 
-[ext_resource type="Texture2D" uid="uid://2vrwa6liyinw" path="res://autumn_field_puresky_4k.hdr" id="1_chdm7"]
 [ext_resource type="PackedScene" uid="uid://bs72ogkvdd7d6" path="res://addons/proto_controller/proto_controller.tscn" id="1_ek2xh"]
 [ext_resource type="PackedScene" uid="uid://ktogkjeouoqv" path="res://scenes/wall_corner.tscn" id="2_q1bhw"]
 [ext_resource type="PackedScene" uid="uid://d0hhuc4nu80pr" path="res://scenes/wall_tsplit.tscn" id="3_n4rvw"]
@@ -36,12 +35,10 @@ colors = PackedColorArray(0, 0, 0, 1, 0.104898, 0.122697, 0.175833, 1, 0.882671,
 [sub_resource type="GradientTexture1D" id="GradientTexture1D_eucu8"]
 gradient = SubResource("Gradient_ue7rj")
 
-[sub_resource type="PanoramaSkyMaterial" id="PanoramaSkyMaterial_202ri"]
-panorama = ExtResource("1_chdm7")
-energy_multiplier = 0.3
+[sub_resource type="ProceduralSkyMaterial" id="ProceduralSkyMaterial_absjr"]
 
 [sub_resource type="Sky" id="Sky_jo1un"]
-sky_material = SubResource("PanoramaSkyMaterial_202ri")
+sky_material = SubResource("ProceduralSkyMaterial_absjr")
 
 [sub_resource type="Environment" id="Environment_na4yn"]
 background_mode = 2
